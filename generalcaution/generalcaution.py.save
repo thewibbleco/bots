@@ -1,0 +1,22 @@
+import json, PIL, requests, sys, tweepy
+sys.path.insert(0,'/root/bots/')
+import sheetstation
+
+
+USERS = sheetstation.get_sheet('API Master Sheet','1')
+CON_KEYS = sheetstation.get_sheet('API Master Sheet','2')
+CON_SECS = sheetstation.get_sheet('API Master Sheet','3')
+ACCESS_KEYS = sheetstation.get_sheet('API Master Sheet','4')
+ACCESS_SECS = sheetstation.get_sheet('API Master Sheet','5')
+
+
+INDEX = USERS.index("@general_caution")
+
+
+CON_KEY = CON_KEYS[INDEX]
+CON_SEC = CON_SECS[INDEX]
+ACCESS_KEY = ACCESS_KEYS[INDEX]
+ACCESS_SEC = ACCESS_SECS[INDEX]
+
+def searchOpenClipArt(item):
+	requests.get(/search/json/?query=play
